@@ -1,0 +1,19 @@
+/* Hero gradient on the home page */
+.template-home .page-header {
+  background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+.template-home .page-header h1,
+.template-home .page-header .lead { color: #fff; }
+
+/* Reference section cards */
+.section h2 { border-bottom: 2px solid #2563EB; padding-bottom: .25rem; }
+
+/* Inline code a touch softer */
+code { color: #1E3A8A; background: #EFF6FF; padding: .1rem .3rem; border-radius: .25rem; }
+
+/* Nicer table zebra for the reference index */
+.ref-index tbody tr:nth-child(odd) { background: #F8FAFC; }

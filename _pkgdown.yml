@@ -1,0 +1,106 @@
+url: https://laws2020.github.io/rpkgfix
+
+template:
+  bootstrap: 5
+  bootswatch: cosmo
+  bslib:
+    primary: "#2563EB"
+    success: "#16A34A"
+    warning: "#D97706"      # amber - warnings
+    danger:  "#DC2626"      # red - errors
+    border-radius: "0.5rem"
+    btn-border-radius: "0.5rem"
+  opengraph:
+    twitter:
+      creator: "@laws2020"
+      card: summary_large_image
+
+home:
+  title: rpkgfix - Diagnose and Fix Common R Package Problems
+  description: >
+    A dependency-light developer toolkit that diagnoses and fixes the most
+    repetitive, error-prone problems in R package development.
+  sidebar:
+    structure: [links, license, community, citation, authors, dev]
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+  components:
+    articles:
+      text: Guides
+      menu:
+      - text: "Get started"
+        href: articles/rpkgfix.html
+      - text: "The diagnostics suite"
+        href: articles/diagnostics.html
+      - text: "Fixing problems safely"
+        href: articles/fixers.html
+    github:
+      icon: fab fa-github
+      href: https://github.com/laws2020/rpkgfix
+      aria-label: GitHub
+
+reference:
+- title: "Run everything"
+  desc: >
+    Orchestrators that run the whole toolkit and give one consolidated report.
+    Start here.
+  contents:
+  - check_all
+  - check_fast
+
+- title: "Diagnostics: metadata & files"
+  desc: "Read-only checks for DESCRIPTION, license, and dependencies."
+  contents:
+  - check_description
+  - check_license
+  - check_imports
+  - check_deps
+  - check_news
+
+- title: "Diagnostics: code quality"
+  desc: "Read-only checks that scan your R/ source for CRAN-flagged issues."
+  contents:
+  - check_encoding
+  - check_style
+  - check_output
+  - check_side_effects
+  - check_globals
+
+- title: "Diagnostics: documentation & tests"
+  desc: "Read-only checks for docs, examples, namespace drift, and coverage."
+  contents:
+  - check_docs
+  - check_namespace
+  - check_examples
+  - check_coverage
+  - check_spelling
+
+- title: "Fixers"
+  desc: >
+    Functions that MODIFY files on disk. Each supports `dry_run = TRUE` to
+    preview changes.
+  contents:
+  - add_namespaces
+  - fix_buildignore
+  - fix_gitignore
+  - bump_version
+  - clean_build
+
+- title: "Helpers"
+  desc: "Exported lookup tables and utilities."
+  contents:
+  - default_mapping
+
+news:
+  releases:
+  - text: "Version 0.1.0"
+    href: news/index.html
+  cran_dates: false
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with

@@ -1,0 +1,32 @@
+Package: rpkgfix  
+Title: Diagnose and Fix Common R Package Problems  
+Version: 0.1.0  
+Authors@R: 
+    person("Lawrence", "Garba", email = "laws.garba@gmail.com",  
+           role = c("aut", "cre"))  
+Description: A dependency-light developer toolkit that diagnoses and fixes the  
+    most repetitive and error-prone problems in R package development. Provides  
+    read-only checks for DESCRIPTION hygiene, license consistency, import  
+    coverage, documentation gaps, NAMESPACE drift, undefined globals, non-ASCII  
+    characters, style anti-patterns, example runnability, test coverage,  
+    spelling, console output, side effects, dependency weight, and NEWS  
+    consistency, plus mutating helpers that repair them.  
+License: MIT + file LICENSE  
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)  
+Imports: 
+    tools,  
+    utils,  
+    stats  
+Suggests: 
+    devtools,  
+    codetools,  
+    withr,  
+    knitr,  
+    rmarkdown,  
+    testthat (>= 3.0.0)  
+Config/testthat/edition: 3  
+URL: https://github.com/laws2020/rpkgfix  
+BugReports: https://github.com/laws2020/rpkgfix/issues  
+Config/roxygen2/version: 8.0.0
+VignetteBuilder: knitr
